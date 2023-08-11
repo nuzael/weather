@@ -17,7 +17,7 @@
             <img class="main-weather-icon" src="{{ current_weather.icon }}" alt="">
             <div class="local">
                 <p class="city">{{ current_weather.city }}</p>
-                <span class="time">Sexta Feira, 00:00</span>
+                <span id="datetime"></span>
             </div>
             
         </div>
@@ -74,9 +74,7 @@
             <p class="text-format">Birmingham</p>
             <p class="text-format">Manchester</p>
             <p class="text-format">New York</p>
-            <p class="text-format">California</p>
             <p class="text-format">São Paulo</p>
-            <p class="text-format">Rio de Janeiro</p>
         </div>
 
         <hr class="line">
@@ -85,24 +83,30 @@
             <p id="title-detail">Weather Details</p>
 
             <div class="info">
+                <p class="text-format">Feels like</p>
+                <strong class="data">{{ current_weather.feels_like }}ºC</strong>
+            </div>
+            <div class="info">
                 <p class="text-format">Cloudy</p>
-                <strong class="data">12%</strong>
+                <strong class="data">{{ current_weather.cloudy }}%</strong>
             </div>
             <div class="info">
                 <p class="text-format">Humidity</p>
-                <strong class="data">78%</strong>
+                <strong class="data">{{ current_weather.humidity }}%</strong>
             </div>
             <div class="info">
                 <p class="text-format">Wind</p>
-                <strong class="data">1km/h</strong>
+                <strong class="data">{{ current_weather.wind }}km/h</strong>
             </div>
             <div class="info">
                 <p class="text-format">Rain</p>
-                <strong class="data">0mm</strong>
+                <strong class="data">{{ current_weather.rain }}mm</strong>
             </div>
         </div>
 
         <hr class="line">
     </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

@@ -46,7 +46,7 @@ body {
     color: white;
 }
 
-.container-left .weather-info .local .time {
+.container-left .weather-info .local #datetime {
     font-size: 0.9em;
     color: white;
 }
