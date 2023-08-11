@@ -1,56 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 body {
+    display: flex;
     font-family: 'Noto Sans', sans-serif;
-    background-color: #F7D9A3;
+    background-image: url('/static/img/cloud.jpg');
 }
 
-main {
-    height: 100vh;
+.container-left {
+    width: 75%;
+    height: 100%;
+}
+
+.container-left .title {
+    color: white;
+    font-size: 0.9em;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.container-left .weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    height: 40vh;
+}
+
+.container-left .weather-info .current-temp {
+    font-size: 4.5em;
+    color: white;
+}
+
+.container-left .weather-info .main-weather-icon {
+    margin-left: -25px;
+}
+
+.container-left .weather-info .local .city {
+    font-size: 1.8em;
+    color: white;
+}
+
+.container-left .weather-info .local .time {
+    font-size: 0.9em;
+    color: white;
+}
+
+.container-left .forecast-weather {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.container-left .forecast-weather .weather-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 70%;
+    width: 18%;
+    background-color: #152c4484;
 }
 
-.title {
-    color: darkslategray;
+.container-left .forecast-weather .weather-box .forecast-title {
+    color: white;
+    font-weight: 400;
 }
 
-.input-search {
-    height: 25px;
-    width: 450px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-}
-
-.input-search:focus {
-    outline-color: darkslategray;
-}
-
-.credits {
-    color: darkslategray;
-    font-size: 0.9em;
-}
-
-.link {
-    text-decoration: none;
-    color: darkslategray;
-    font-weight: bold;
-}
-
-.container {
+.container-left .forecast-weather .weather-box .temp {
     display: flex;
-    column-gap: 10px;
+    column-gap: 8px;
 }
 
-.weather-info {
-    height: 100px;
+.container-left .forecast-weather .weather-box .temp .max-temp {
+    color: white;
+}
+
+.container-left .forecast-weather .weather-box .temp .min-temp {
+    color: rgb(180, 180, 180);
+}
+
+.container-right {
+    width: 25%;
+    height: 100vh;
+    background-color: #152c4484;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.container-right .line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: rgb(180, 180, 180);
+    border-style: solid;
+}
+
+.container-right .text-format {
+    font-size: 0.9em;
+    color: rgb(180, 180, 180);
+}
+
+.container-right .data {
+    font-size: 0.9em;
+    color: white;
+}
+
+.container-right .container-location {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.container-right .container-location .form-search {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-right .container-location .input-search {
+    height: 30px;
+    width: 300px;
+    color: white;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1.9px;
+    border-color: rgb(180, 180, 180);
+    font-size: 0.9em;
+    background-color: transparent;
+}
+
+.container-right .container-location .input-search:focus {  
+    outline: none;
+    background-color: transparent;
+}
+
+.container-right .container-location .button-search {
+    background-color: rgba(220, 220, 220, 0.618);
+    border: none;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: -35px;
+}
+
+.container-right .container-location .img-search {
+    width: 25px;
+}
+
+.container-right .container-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.container-right .container-details #title-detail {
+    font-size: 0.9em;
+    color: white;
+    padding-top: 15px;
+}
+
+.container-right .container-details .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

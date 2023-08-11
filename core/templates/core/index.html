@@ -6,30 +6,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Weather</title>
 </head>
 <body>
-    <main>
+    <div class="container-left">
         <h1 class="title">Weather</h1>
-        <form class="search" action="{% url 'index' %}" method="GET">
-            <input class="input-search" type="search" name="q" placeholder="Name of the city...">
-        </form>
-        <div class="container">
-            <div class="weather-info">
-                a
+        <div class="weather-info">
+            <p class="current-temp">{{ current_weather.current_temp }}º</p>
+            <img class="main-weather-icon" src="{{ current_weather.icon }}" alt="">
+            <div class="local">
+                <p class="city">{{ current_weather.city }}</p>
+                <span class="time">Sexta Feira, 00:00</span>
             </div>
-            <div class="weather-info">
-                a
+            
+        </div>
+        <div class="forecast-weather">
+            <div class="weather-box">
+                <p class="forecast-title">Segunda</p>
+                <img src="{{ current_weather.icon }}" alt="">
+                <div class="temp">
+                    <p class="max-temp">28º</p>
+                    <p class="min-temp">17º</p>
+                </div>
             </div>
-            <div class="weather-info">
-                a
+            <div class="weather-box">
+                <p class="forecast-title">Terça</p>
+                <img src="{{ current_weather.icon }}" alt="">
+                <div class="temp">
+                    <p class="max-temp">28º</p>
+                    <p class="min-temp">17º</p>
+                </div>
             </div>
-            <div class="weather-info">
-                a
+            <div class="weather-box">
+                <p class="forecast-title">Quarta</p>
+                <img src="{{ current_weather.icon }}" alt="">
+                <div class="temp">
+                    <p class="max-temp">28º</p>
+                    <p class="min-temp">17º</p>
+                </div>
+            </div>
+            <div class="weather-box">
+                <p class="forecast-title">Quinta</p>
+                <img src="{{ current_weather.icon }}" alt="">
+                <div class="temp">
+                    <p class="max-temp">28º</p>
+                    <p class="min-temp">17º</p>
+                </div>
+            </div>
+            <div class="weather-box">
+                <p class="forecast-title">Sexta</p>
+                <img src="{{ current_weather.icon }}" alt="">
+                <div class="temp">
+                    <p class="max-temp">28º</p>
+                    <p class="min-temp">17º</p>
+                </div>
             </div>
         </div>
-        <p class="credits">Weather. All rights reserved | Made by <a class="link" href="https://github.com/nuzael" target="_blank">Nuzael</a></p>
-    </main>
+    </div>
+
+    <div class="container-right">
+        <div class="container-location">
+            <form class="form-search" action="{% url 'index' %}" method="GET">
+                <input class="input-search" type="search" name="q" placeholder="Name of the city...">
+                <button class="button-search" type="submit"><img class="img-search" src="{% static 'img/search.png' %}" alt=""></button>
+            </form>
+            <p class="text-format">Birmingham</p>
+            <p class="text-format">Manchester</p>
+            <p class="text-format">New York</p>
+            <p class="text-format">California</p>
+            <p class="text-format">São Paulo</p>
+            <p class="text-format">Rio de Janeiro</p>
+        </div>
+
+        <hr class="line">
+
+        <div class="container-details">
+            <p id="title-detail">Weather Details</p>
+
+            <div class="info">
+                <p class="text-format">Cloudy</p>
+                <strong class="data">12%</strong>
+            </div>
+            <div class="info">
+                <p class="text-format">Humidity</p>
+                <strong class="data">78%</strong>
+            </div>
+            <div class="info">
+                <p class="text-format">Wind</p>
+                <strong class="data">1km/h</strong>
+            </div>
+            <div class="info">
+                <p class="text-format">Rain</p>
+                <strong class="data">0mm</strong>
+            </div>
+        </div>
+
+        <hr class="line">
+    </div>
 </body>
 </html>
