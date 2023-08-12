@@ -69,7 +69,7 @@ body {
     background-color: #152c4484;
 }
 
-.container-left .forecast-weather .weather-box .forecast-title {
+.container-left .forecast-weather .weather-box #forecast-title {
     color: white;
     font-weight: 400;
 }

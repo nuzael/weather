@@ -22,46 +22,16 @@
             
         </div>
         <div class="forecast-weather">
-            <div class="weather-box">
-                <p class="forecast-title">Segunda</p>
-                <img src="{{ current_weather.icon }}" alt="">
-                <div class="temp">
-                    <p class="max-temp">28º</p>
-                    <p class="min-temp">17º</p>
+            {% for day in forecast_weather %}
+                <div class="weather-box">
+                    <p id="forecast-title">Segunda</p>
+                    <img src="{{ current_weather.icon }}" alt="">
+                    <div class="temp">
+                        <p class="max-temp">{{ day.max_temp }}º</p>
+                        <p class="min-temp">{{ day.min_temp }}º</p>
+                    </div>
                 </div>
-            </div>
-            <div class="weather-box">
-                <p class="forecast-title">Terça</p>
-                <img src="{{ current_weather.icon }}" alt="">
-                <div class="temp">
-                    <p class="max-temp">28º</p>
-                    <p class="min-temp">17º</p>
-                </div>
-            </div>
-            <div class="weather-box">
-                <p class="forecast-title">Quarta</p>
-                <img src="{{ current_weather.icon }}" alt="">
-                <div class="temp">
-                    <p class="max-temp">28º</p>
-                    <p class="min-temp">17º</p>
-                </div>
-            </div>
-            <div class="weather-box">
-                <p class="forecast-title">Quinta</p>
-                <img src="{{ current_weather.icon }}" alt="">
-                <div class="temp">
-                    <p class="max-temp">28º</p>
-                    <p class="min-temp">17º</p>
-                </div>
-            </div>
-            <div class="weather-box">
-                <p class="forecast-title">Sexta</p>
-                <img src="{{ current_weather.icon }}" alt="">
-                <div class="temp">
-                    <p class="max-temp">28º</p>
-                    <p class="min-temp">17º</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
