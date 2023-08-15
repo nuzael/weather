@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Weather</title>
 </head>
@@ -14,7 +15,7 @@
         <h1 class="title">Weather</h1>
         <div class="weather-info">
             <p class="current-temp">{{ current_weather.current_temp }}º</p>
-            <img class="main-weather-icon" src="{{ current_weather.icon }}" alt="">
+            <img id="main-weather-icon" src="{{ current_weather.icon }}" alt="">
             <div class="local">
                 <p class="city">{{ current_weather.city }}</p>
                 <span id="datetime"></span>
@@ -24,8 +25,8 @@
         <div class="forecast-weather">
             {% for day in forecast_weather %}
                 <div class="weather-box">
-                    <p id="forecast-title">Segunda</p>
-                    <img src="{{ current_weather.icon }}" alt="">
+                    <p id="forecast-title"></p>             
+                    <img id="day-icon" src="https://openweathermap.org/img/wn/{{ day.icon }}n@2x.png" alt="">
                     <div class="temp">
                         <p class="max-temp">{{ day.max_temp }}º</p>
                         <p class="min-temp">{{ day.min_temp }}º</p>

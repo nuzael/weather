@@ -37,6 +37,23 @@ function setDayOfTheWeek() {
     });
 }
 
+function setDayIcon() {
+    const currentDayIconElement = document.querySelector('#main-weather-icon');
+    var posIndex = currentDayIconElement.src.indexOf("@") - 1;
+
+    const dayIconElements = document.querySelectorAll('#day-icon');
+
+    dayIconElements.forEach((element) => {
+        if (currentDayIconElement.src[posIndex] == "d") {
+            element.textContent = "https://openweathermap.org/img/wn/{{ day.icon }}d@2x.png"
+        }
+        else {
+            element.textContent = "https://openweathermap.org/img/wn/{{ day.icon }}n@2x.png"
+        }
+    });
+}
+
 setInterval(updateDatetime, 1000);
 setDayOfTheWeek();
+setDayIcon();
 updateDatetime();
