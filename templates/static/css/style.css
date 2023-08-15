@@ -118,6 +118,12 @@ body {
     row-gap: 25px;
 }
 
+.container-right .container-location .default_city {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: rgb(180, 180, 180);
+}
+
 .container-right .container-location .form-search {
     display: flex;
     align-items: flex-end;
