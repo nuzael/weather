@@ -39,7 +39,7 @@
     <div class="container-right">
         <div class="container-location">
             <form class="form-search" action="{% url 'index' %}" method="GET">
-                <input class="input-search" type="search" name="q" placeholder="Name of the city...">
+                <input class="input-search" type="search" name="q" placeholder="Nome da cidade...">
                 <button class="button-search" type="submit"><img class="img-search" src="{% static 'img/search.png' %}" alt=""></button>
             </form>
             <p class="text-format">Birmingham</p>
@@ -51,26 +51,26 @@
         <hr class="line">
 
         <div class="container-details">
-            <p id="title-detail">Weather Details</p>
+            <p id="title-detail">Detalhes climáticos</p>
 
             <div class="info">
-                <p class="text-format">Feels like</p>
+                <p class="text-format">Sensação térmica</p>
                 <strong class="data">{{ current_weather.feels_like }}ºC</strong>
             </div>
             <div class="info">
-                <p class="text-format">Cloudy</p>
+                <p class="text-format">Nublado</p>
                 <strong class="data">{{ current_weather.cloudy }}%</strong>
             </div>
             <div class="info">
-                <p class="text-format">Humidity</p>
+                <p class="text-format">Umidade</p>
                 <strong class="data">{{ current_weather.humidity }}%</strong>
             </div>
             <div class="info">
-                <p class="text-format">Wind</p>
+                <p class="text-format">Vento</p>
                 <strong class="data">{{ current_weather.wind }}km/h</strong>
             </div>
             <div class="info">
-                <p class="text-format">Rain</p>
+                <p class="text-format">Chuva</p>
                 <strong class="data">{{ current_weather.rain }}mm</strong>
             </div>
         </div>
