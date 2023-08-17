@@ -1,5 +1,4 @@
 # Weather Forecasting
-
 This repository contains a website project that displays the current weather of a city, along with a 5-day weather forecast.
 
 ## How It Works
@@ -34,7 +33,7 @@ pip install -r requirements.txt
 ```
 
 ### Configure environment variables:
-Rename the .env.example file to .env and fill in the necessary information, such as API keys.
+Rename the `.env.example` file to `.env` and fill in the necessary information, such as API keys.
 
 ### Run database migrations:
 ```bash
